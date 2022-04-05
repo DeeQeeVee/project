@@ -12,7 +12,8 @@ if k > 0:
 
     else:
         if x < 10**(k - 1):
-            print("0", x, sep="", file = file_output)
+            print("0", x, sep = "", file = file_output)
             
         else:
             print(x, file = file_output)
+    
