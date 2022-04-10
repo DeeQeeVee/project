@@ -1,20 +1,22 @@
+import math
+
 file_input = open("SPNUM.inp", "r")
 file_output = open("SPNUM.out", "w")
 n = int(file_input.readline())
+a = [0] * 10000001
 
-F = [True] * (n + 1)
-F[0] = F[1] = False
-spnum = 0
-m = int(n**0.5) + 1
-n += 1
-for i in range(2, m):
+l = math.sqrt(n)
+for i in range(2, int(math.sqrt(l)) + 1):
+        if a[i] == 0:
+                for j in range(i + i, int(l) + 1, i):
+                        a[j] = 1
+count = 0
 
-        if F[i]:
-                for j in range(i**2, n, i):
+for i in range(2, int(l) + 1):
+        if a[i] == 0 and (i * i <= n):
+                count += 1
 
-                        if j  == i**2:
-                                spnum += 1
-                                
-        F[j] = False
+        if a[i] == 0 and (i * i > n):
+                break
 
-print(spnum, file = file_output)
+print(count, file = file_output)
