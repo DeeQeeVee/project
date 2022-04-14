@@ -1,7 +1,7 @@
 file_input = open("TONGCHUSO.inp", "r")
 file_output = open("TONGCHUSO.out", "w")
 
-n = file_input.readline()
+n = file_input.readline().strip("\n")
 s = str(n)
 
 count = 0
