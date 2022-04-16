@@ -13,9 +13,9 @@ for i in demo:
 
 d, c = 0, len(demo)
 
-while int(demo[c-1]) <= max:
+while int(demo[c - 1]) <= max:
 
-        for i in range(d,c):
+        for i in range(d, c):
 
                 if min <= int("7"+ demo[i]) <= max:
                         count += 1
@@ -29,7 +29,7 @@ while int(demo[c-1]) <= max:
         if c == 0: 
                 break
 
-        for i in range(d,c):
+        for i in range(d, c):
                 
                 if  min <= int("9"+ demo[i]) <= max:
                         count += 1
