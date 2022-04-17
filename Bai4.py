@@ -15,16 +15,22 @@ for i in range(n):
 for i in range(n):
         for j in range(n):
                 data[i][j] = int(data[i][j])
+
 max = -99999999
+
 # select a sub-square of size k*k whose sum of the values of all the cells of the sub-square is the largest and print a single line with a positive integer that is the sum of the maximum values required to output
 for i in range(n):
         for j in range(n):
-                if i + k <= n and j + k <= n:
+
+                if (i + k <= n) and (j + k <= n):
+
                         sum = 0
+                        
                         for x in range(i, i + k):
                                 for y in range(j, j + k):
                                         sum += data[x][y]
-                        if sum > max:
+
+                        if (sum > max):
                                 max = sum
                                 x_max = i
                                 y_max = j
