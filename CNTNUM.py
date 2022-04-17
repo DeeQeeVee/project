@@ -1,7 +1,7 @@
 file_input = open("CNTNUM.inp", "r")
 file_output = open("CNTNUM.out", "w")
 
-a, b, c, d = map(int,file_input.read().split())
+a, b, c, d = map(int, file_input.read().split())
 m, n = c, d
 to = b - a + 1
 
@@ -38,4 +38,4 @@ for i in F:
 
         to -= t
 
-print(to, file = file_output)
+print(to, file = file_output)                   
