@@ -14,14 +14,17 @@ def  pq(A, i, j, n):   #tìm vị trí p, q thoả mãn đề bài
     kq = 0 #kết quả
 
     for a in range(n):
-        if A[a][j] > 0 and abs(i-a) <= kc and A[a][j] > kq: #abs để tính khoảng cách giữa 2 vị trí
-            kc = abs(i-a)
+
+        if (A[a][j] > 0) and (abs(i - a) <= kc) and (A[a][j] > kq): #abs để tính khoảng cách giữa 2 vị trí
+            kc = abs(i - a)
             kq = A[a][j]
             
     for b in range(n):
-        if A[i][b] > 0 and abs(j-b) <= kc and A[i][b] > kq:
-            kc = abs(j-b)
+        
+        if (A[i][b] > 0) and (abs(j - b) <= kc) and (A[i][b] > kq):
+            kc = abs(j - b)
             kq = A[i][b]
+
     return kq
 
 
@@ -37,7 +40,7 @@ for i in range(n):
 for i in range(n):
     b = []
     for j in range(n):
-       if A[i][j] > 0:
+       if (A[i][j] > 0):
            b.append(A[i][j])
        else:
            b.append(pq(A,i,j,n))
